@@ -1,11 +1,34 @@
-import React from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, {createRef, useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ShowCase = () => {
+    const projectRefs = useRef(Array.from({length: 3},()=>createRef()));
+    useGSAP(()=>{
+        projectRefs.current.map((ref,index) =>{
+            gsap.fromTo(ref.current,
+                {opacity: 0},
+                {
+                    opacity: 1,
+                    duration: 1,
+                    delay: 0.1 * index,
+                    scrollTrigger: {
+                        trigger: ref.current, 
+                        start: 'top bottom-=100',
+                    },
+                }
+            )
+        })
+        
+    },[])
   return (
-    <div id="work" className='app-showcase'>
+    <section id="work" className='app-showcase'>
         <div className='w-full'>
             <div className="showcaselayout">
-                <div className='first-project-wrapper'>
+                <div className='first-project-wrapper project-card' ref={projectRefs.current[0]}>
                     <div className='image-wrapper'>
                         <img src='/images/project1.png' alt='ryde'/>
                     </div>
@@ -17,13 +40,13 @@ const ShowCase = () => {
                     </div>
                 </div>
                 <div className="project-list-wrapper overflow-hidden">
-                    <div className="project">
+                    <div className="project project-card" ref={projectRefs.current[1]}>
                         <div className="image-wrapper bg-[#ffefdb]">
                             <img src='/images/project2.png' alt='project2'/>
                         </div>
                         <h2>A Library Management System</h2>
                     </div>
-                    <div className="project">
+                    <div className="project project-card" ref={projectRefs.current[2]}>
                         <div className="image-wrapper bg-[#ffe7db]">
                             <img src='/images/project3.png' alt='project3'/>
                         </div>
@@ -32,7 +55,7 @@ const ShowCase = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </section>
   )
 }
 
