@@ -17,7 +17,7 @@ const Hero = () => {
         <img src="/images/bg.png" alt="" />
       </div>
     <div className="hero-layout">
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5 z-10 pointer-events-none">
+        <header className="flex flex-col justify-center md:w-auto w-screen md:px-20 px-5 z-10 md:inline-block">
             <div className="flex flex-col gap-7">
                 <div className="hero-text">
                     <h1>Shaping 
