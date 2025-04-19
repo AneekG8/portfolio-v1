@@ -18,6 +18,7 @@ const ShowCase = () => {
                     scrollTrigger: {
                         trigger: ref.current, 
                         start: 'top bottom-=100',
+                        toggleActions: 'restart none none reverse'
                     },
                 }
             )
