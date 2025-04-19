@@ -13,8 +13,8 @@ const ShowCase = () => {
                 {opacity: 0},
                 {
                     opacity: 1,
-                    duration: 1,
-                    delay: 0.1 * index,
+                    duration: 1.5,
+                    delay: 0.2 * index,
                     scrollTrigger: {
                         trigger: ref.current, 
                         start: 'top bottom-=100',
@@ -22,8 +22,7 @@ const ShowCase = () => {
                     },
                 }
             )
-        })
-        
+        })     
     },[])
   return (
     <section id="work" className='app-showcase'>
