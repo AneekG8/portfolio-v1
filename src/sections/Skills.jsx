@@ -3,22 +3,45 @@ import TechIconModel from "../components/models/TechModels/TechIconModel"
 import SectionTitle from "../components/SectionTitle"
 import { techStackIcons } from "../constants"
 import gsap from "gsap"
+import { useMediaQuery } from "react-responsive"
 
 const Skills = () => {
+    const isTablet = useMediaQuery({query: '(max-width: 767px)'});
     useGSAP(()=>{
-        gsap.fromTo('.tech-card',{
-            opacity:0,
-        },{
-            opacity:1,
-            duration:1,
-            stagger:0.2,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '#skills',
-                start: 'top center',
-                toggleActions: 'restart none none reverse'
-            }
-        })
+        if(!isTablet){
+            gsap.fromTo('.tech-card',
+                {
+                    opacity:0
+                },
+                {
+                    opacity:1,
+                    duration:1,
+                    stagger:0.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#skills',
+                        start: 'top center',
+                        toggleActions: 'restart none none reverse'
+                    }
+                })
+        }else{
+            gsap.utils.toArray('.tech-card').forEach(card => {
+                gsap.fromTo(card,
+                    {
+                        opacity:0
+                    },
+                    {
+                        opacity:1,
+                        duration:1,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top bottom-=20%',
+                            toggleActions: 'restart none none reverse'
+                        }
+                    })
+            })
+        }
     },[])
   return (
     <section id="skills" className="flex-center section-padding">
