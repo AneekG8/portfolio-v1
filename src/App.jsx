@@ -2,7 +2,7 @@ import Hero from './sections/Hero'
 import ShowCase from './sections/ShowCase'
 import Navbar from './components/Navbar'
 import FeatureCards from './sections/FeatureCards'
-import ExperienceSection from './sections/ExperienceSection'
+import Experience from './sections/Experience'
 const App = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const App = () => {
       <Hero />
       <ShowCase />
       <FeatureCards />
-      <ExperienceSection />
+      <Experience />
     </>
   )
 }

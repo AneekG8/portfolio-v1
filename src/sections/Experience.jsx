@@ -4,7 +4,7 @@ import { expCards } from "../constants"
 import gsap from "gsap"
 import { useRef } from "react"
 
-const ExperienceSection = () => {
+const Experience = () => {
     const timelineBarRefs = useRef([]);
     useGSAP(() => {
         timelineBarRefs.current.forEach(bar => {
@@ -71,4 +71,4 @@ const ExperienceSection = () => {
   )
 }
 
-export default ExperienceSection
+export default Experience;
