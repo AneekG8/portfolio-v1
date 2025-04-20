@@ -1,6 +1,6 @@
 export const Button = ({text,className,id}) => {
     return (
-        <a className={`${className} cta-wrapper`} id={id}>
+        <a className={`${className} cta-wrapper`} href={`#${id}`}>
             <div className="cta-button group">
                 <div className="bg-circle"/>
                 <p className="text">

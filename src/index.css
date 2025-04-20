@@ -251,6 +251,14 @@ section {
     @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
   }
 
+  .timeline-bar {
+    @apply w-0.5 h-full absolute top-0;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 9;
+    background: linear-gradient(180deg, white, black);
+  }
+
   .timeline-logo {
     @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
   }

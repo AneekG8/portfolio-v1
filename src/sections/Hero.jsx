@@ -37,7 +37,7 @@ const Hero = () => {
                     <h1>that Deliver Results</h1>
                 </div>
                 <p className="text-white-50 md:text-md text-sm relative z-10 pointer-events-none">Hi, I am Aneek. A fullstack web developer with 3+ years of professional experience.</p>
-                <Button className="md:w-80 md:h-16 w-60 h-12" text="See My Work" id="seeMyWorkBtn"/>
+                <Button className="md:w-80 md:h-16 w-60 h-12" text="See My Work" id="work"/>
             </div>
         </header>
         <figure>
