@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import FeatureCards from './sections/FeatureCards'
 import Experience from './sections/Experience'
 import Skills from './sections/Skills'
+import Contact from './sections/Contact'
 const App = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const App = () => {
       <FeatureCards />
       <Experience />
       <Skills/>
+      <Contact/>
     </>
   )
 }

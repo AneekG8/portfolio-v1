@@ -1,15 +1,22 @@
-export const Button = ({text,className,id}) => {
+import React from "react"
+
+export const Button = ({text,className,component = 'button',href,iconPath,...props}) => {
     return (
-        <a className={`${className} cta-wrapper`} href={`#${id}`}>
-            <div className="cta-button group">
-                <div className="bg-circle"/>
-                <p className="text">
-                    {text}
-                </p>
-                <div className="arrow-wrapper">
-                    <img src="/images/arrow-down.svg" alt="arrow" />
+        React.createElement(component, {
+            className: `${className} cta-wrapper`,
+            href,
+            children: (
+                <div className="cta-button group">
+                    <div className="bg-circle"/>
+                    <p className="text">
+                        {text}
+                    </p>
+                    <div className="arrow-wrapper">
+                        <img src={iconPath} alt="arrow" />
+                    </div>
                 </div>
-            </div>
-        </a>
+            ),
+            ...props
+        })
     )
 }
