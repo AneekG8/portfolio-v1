@@ -1,14 +1,15 @@
 import SectionTitle from "../components/SectionTitle"
 import { Button } from "../components/Button"
+import ComputerModelExperience from "../components/models/ComputerModels/ComputerModelExperience"
 
 const Contact = () => {
   return (
     <section id="contact" className="mt-32 section-padding flex-center">
         <div className="w-full h-full md:px-10 px-5">
             <SectionTitle title="Contact Me" subtitle="💬 Get in touch"/>
-            <div className="mt-16 grid-12-cols">
-                <div className="xl:col-span-5">
-                    <div className="card-border rounded-xl p-10 flex-center">
+            <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div className="lg:col-span-6">
+                    <div className="card-border rounded-xl md:p-10 p-5 flex-center">
                         <form onSubmit={(e)=>{e.preventDefault()}} className="w-full flex flex-col flex-center gap-7">
                             <div className="w-full">
                                 <label htmlFor="name">Name</label>
@@ -31,8 +32,10 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <div className="xl:col-span-7 border-2 border-solid-white min-h-96">
-                    
+                <div className="lg:col-span-6 flex flex-col items-center justify-center">
+                    <div className="bg-black-500 hover:cursor-grab rounded-lg w-full xl:h-120 sm:h-90 h-70">
+                    <ComputerModelExperience/>
+                    </div>
                 </div>
             </div>
         </div>
