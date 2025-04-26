@@ -2,7 +2,7 @@
   "name": "portfolio-aneek-v1",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Aneekg8.github.io/portfolio-v1",
+  "homepage": "https://Aneekg8.github.io/portfolio-v1/",
   "type": "module",
   "scripts": {
     "dev": "vite",
