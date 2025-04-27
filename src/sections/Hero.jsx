@@ -15,7 +15,7 @@ const Hero = () => {
   return (
    <section id="hero" className="relative overflow-hidden">
      <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="" />
+        <img src="../../public/images/bg.png" alt="" />
       </div>
     <div className="hero-layout">
         <header className="flex flex-col justify-center md:w-auto w-screen md:px-20 px-5 z-10 md:inline-block">
@@ -38,7 +38,7 @@ const Hero = () => {
                 </div>
                 <p className="text-white-50 md:text-md text-sm relative z-10 pointer-events-none">Hi, I am Aneek. A fullstack web developer with 3+ years of professional experience.</p>
                 <Button 
-                    iconPath="/images/arrow-down.svg" 
+                    iconPath="../../public/images/arrow-down.svg" 
                     component="a" 
                     className="md:w-80 md:h-16 w-60 h-12" 
                     text="See My Work" 

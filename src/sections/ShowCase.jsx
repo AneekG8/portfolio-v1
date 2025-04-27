@@ -30,7 +30,7 @@ const ShowCase = () => {
             <div className="showcaselayout">
                 <div className='first-project-wrapper project-card' ref={projectRefs.current[0]}>
                     <div className='image-wrapper'>
-                        <img src='/images/project1.png' alt='ryde'/>
+                        <img src='../../public/images/project1.png' alt='ryde'/>
                     </div>
                     <div className="text-content">
                         <h2>On demand rides made simple with a user friendly app</h2>
@@ -42,13 +42,13 @@ const ShowCase = () => {
                 <div className="project-list-wrapper overflow-hidden">
                     <div className="project project-card" ref={projectRefs.current[1]}>
                         <div className="image-wrapper bg-[#ffefdb]">
-                            <img src='/images/project2.png' alt='project2'/>
+                            <img src='../../public/images/project2.png' alt='project2'/>
                         </div>
                         <h2>A Library Management System</h2>
                     </div>
                     <div className="project project-card" ref={projectRefs.current[2]}>
                         <div className="image-wrapper bg-[#ffe7db]">
-                            <img src='/images/project3.png' alt='project3'/>
+                            <img src='../../public/images/project3.png' alt='project3'/>
                         </div>
                         <h2>YC Directory - A Startup Showcase App</h2>
                     </div>
