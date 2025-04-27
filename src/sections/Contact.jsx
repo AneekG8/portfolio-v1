@@ -141,7 +141,7 @@ const Contact = () => {
                                 </div>
                             ))}
                             <Button
-                                iconPath="../../public/images/arrow-right.svg"
+                                iconPath="/portfolio-v1/images/arrow-right.svg"
                                 className="md:h-16 w-full h-12 send-button" 
                                 text={loading ? "Sending..." : "Send Message"}
                                 type="submit"

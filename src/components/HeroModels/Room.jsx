@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Room(props) {
-  const { nodes, materials } = useGLTF('../../../public/models/optimized-room.glb')
+  const { nodes, materials } = useGLTF('/portfolio-v1/models/optimized-room.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes._________6_blinn1_0.geometry} material={materials.blinn1} />
@@ -46,4 +46,4 @@ export default function Room(props) {
   )
 }
 
-useGLTF.preload('../../../public/models/optimized-room.glb')
+useGLTF.preload('/portfolio-v1/models/optimized-room.glb')
