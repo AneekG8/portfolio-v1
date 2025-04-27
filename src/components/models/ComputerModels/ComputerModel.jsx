@@ -19,6 +19,6 @@ function ComputerModel(props) {
   )
 }
 
-useGLTF.preload('/portfolio-v1/computer-optimized-transformed.glb')
+useGLTF.preload('/portfolio-v1/models/computer-optimized-transformed.glb')
 
 export default ComputerModel
