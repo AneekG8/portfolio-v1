@@ -150,9 +150,9 @@ const expCards = [
     title: "Frontend Developer",
     date: "January 2023 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developed a user friendly Kitchen Display System handling real time updates with Pusher Integration",
+      "Developed a Smart Order Router Management System with hardware integration like printer, scanner and real time updates. Enahced UX with responsive grid system and animations",
+      "Built a Workforce Management System project from scratch setting up authentication, UI library, Deployment pipeline etc.",
     ],
   },
   {
@@ -163,9 +163,9 @@ const expCards = [
     title: "Back End Developer",
     date: "July 2022 - December 2022",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed a micro service from scratch in Nest.js integrating multiple microservices, APIs, Webhooks and real time communicaion with Kafka",
+      "Developed a CRUD API system with authentication for users to register on our system",
+      "Optimized user registration journey integrating multiple microservices and API call",
     ],
   },
   // {
