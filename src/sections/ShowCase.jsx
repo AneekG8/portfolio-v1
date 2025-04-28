@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React, {createRef, useRef } from 'react'
+import SectionTitle from '../components/SectionTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +28,8 @@ const ShowCase = () => {
   return (
     <section id="work" className='app-showcase'>
         <div className='w-full'>
-            <div className="showcaselayout">
+            <SectionTitle title="Personal Projects" subtitle="👷 My Work" />
+            <div className="showcaselayout mt-16">
                 <div className='first-project-wrapper project-card' ref={projectRefs.current[0]}>
                     <div className='image-wrapper'>
                         <img src='/portfolio-v1/images/project1.png' alt='ryde'/>
