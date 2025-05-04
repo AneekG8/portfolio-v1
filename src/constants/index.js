@@ -110,36 +110,60 @@ const techStackImgs = [
 
 const techStackIcons = [
   {
-    name: "React Developer",
-    modelPath: "/portfolio-v1/models/react_logo-transformed.glb",
-    scale: 1,
+    name: "HTML",
+    modelPath: "/portfolio-v1/models/html.glb",
+    scale: 0.021,
+    position: [0, -4, 0],
+  },
+  {
+    name: "CSS",
+    modelPath: "/portfolio-v1/models/css.glb",
+    scale: 0.021,
+    position: [0, -4, 0],
+  },
+  // {
+  //   name: "Javascript",
+  //   modelPath: "/portfolio-v1/models/js.glb",
+  //   scale: 40,
+  //   // rotation: [Math.PI, Math.PI, Math.PI],
+  //   position: [10, -4, 0],
+  // },
+  {
+    name: "Typescript",
+    modelPath: "/portfolio-v1/models/ts.glb",
+    scale: 1.4,
+    position: [0, 0, 0],
+  },
+  {
+    name: "React.js",
+    modelPath: "/portfolio-v1/models/react.glb",
+    scale: 0.9,
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
-    modelPath: "/portfolio-v1/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Backend Developer",
-    modelPath: "/portfolio-v1/models/node-transformed.glb",
-    scale: 5,
+    name: "Node.js",
+    modelPath: "/portfolio-v1/models/node.glb",
+    scale: 4.5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
-    modelPath: "/portfolio-v1/models/three.js-transformed.glb",
-    scale: 0.05,
+    name: "C++",
+    modelPath: "/portfolio-v1/models/cpp.glb",
+    scale: 0.07,
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
-    modelPath: "/portfolio-v1/models/git-svg-transformed.glb",
-    scale: 0.05,
+    name: "Git",
+    modelPath: "/portfolio-v1/models/git.glb",
+    scale: 0.045,
     rotation: [0, -Math.PI / 4, 0],
   },
 ];
+
+const techStackIconsDuplicate = techStackIcons.map((icon) => ({
+  ...icon,
+  modelPath: icon.modelPath.split(".")[0] + "-duplicate" + ".glb",
+}));
 
 const expCards = [
   {
@@ -276,6 +300,7 @@ export {
   testimonials,
   socialImgs,
   techStackIcons,
+  techStackIconsDuplicate,
   techStackImgs,
   navLinks,
 };

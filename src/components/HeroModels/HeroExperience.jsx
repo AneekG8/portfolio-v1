@@ -8,7 +8,7 @@ const HeroExperience = () => {
     <Canvas camera={{position: [0,0,15],fov:45}}>
         <HeroLights/>
         <OrbitControls enablePan={false} enableZoom={false} maxDistance={20} minDistance={5} minPolarAngle={Math.PI / 5} maxPolarAngle={Math.PI / 2} minAzimuthAngle={-Math.PI / 4} maxAzimuthAngle={Math.PI / 4}/>
-          <HeroGroup/>
+        <HeroGroup/>
     </Canvas>
   )
 }

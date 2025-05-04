@@ -491,3 +491,22 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+
+.scroller {
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller-inner {
+  width: fit-content;
+  animation: scroll 10s linear infinite;
+}
+
+.scroller-inner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - var(--spacing) * 6));
+  }
+}
