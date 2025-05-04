@@ -11,7 +11,23 @@ const Hero = () => {
             {y: 50,opacity: 0},
             {y: 0,opacity: 1,duration: 1,stagger: 0.2},
         )
-    })
+        gsap.fromTo('.hero-3d-layout',
+            {
+                x: 100,
+                opacity: 0
+            },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: 'power1.out'
+            }
+        )
+        gsap.fromTo('.subtitle',
+            {x: -100,opacity: 0},
+            {x: 0,opacity: 1,duration: 1,stagger: 0.2},
+        )
+    },[])
   return (
    <section id="hero" className="relative overflow-hidden">
      <div className="absolute top-0 left-0 z-10">
@@ -36,11 +52,11 @@ const Hero = () => {
                     <h1>into Real Projects</h1>
                     <h1>that Deliver Results</h1>
                 </div>
-                <p className="text-white-50 md:text-md text-sm relative z-10 pointer-events-none">Hi, I am Aneek. A fullstack web developer with 3+ years of professional experience.</p>
+                <p className="text-white-50 md:text-base text-sm relative z-10 pointer-events-none subtitle">Hi, I am Aneek. A fullstack web developer with 3+ years of professional experience.</p>
                 <Button 
                     iconPath="/portfolio-v1/images/arrow-down.svg" 
                     component="a" 
-                    className="md:w-80 md:h-16 w-60 h-12" 
+                    className="md:w-80 md:h-16 w-60 h-12 subtitle" 
                     text="See My Work" 
                     href="#work"
                 />

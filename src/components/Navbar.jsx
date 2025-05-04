@@ -1,8 +1,25 @@
+import { useGSAP } from "@gsap/react";
 import { navLinks } from "../constants"
 import { useEffect, useState } from "react"
+import gsap from "gsap";
 
 const Navbar = () => {
     const [scrolled,setScrolled] = useState(false);
+
+    useGSAP(()=>{
+        gsap.fromTo('.inner',
+            {
+                opacity: 0,
+                transform: 'translateY(-100%)',
+            },
+            {
+                opacity: 1,
+                duration: 0.5,
+                ease:'linear',
+                transform: 'translateY(0)',
+            }
+        )
+    },[])
 
     useEffect(()=>{
         const handleScroll = () => {
