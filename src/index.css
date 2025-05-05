@@ -530,7 +530,6 @@ section {
 
 .skill-circle {
   position: relative;
-  animation: orbitalMotion 30s linear infinite;
 }
 
 .orbit-icon {

@@ -121,7 +121,7 @@ const Contact = () => {
     };
 
   return (
-    <section id="contact" className="mt-32 section-padding flex-center">
+    <section id="contact" className="mt-16 section-padding flex-center">
         <div className="w-full h-full md:px-10 px-5">
             <SectionTitle title="Contact Me" subtitle="💬 Get in touch"/>
             <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10">

@@ -40,14 +40,63 @@ const Experience = () => {
                 }
             )
         })
+        gsap.utils.toArray('.exp-card-container').forEach(card => {
+            gsap.fromTo(card.children[0],
+                {
+                    opacity: 0,
+                    x: -100
+                },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: 'power1.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        ease: 'power1.out',
+                        start: 'top bottom-=100',
+                        end: 'top bottom-=100',
+                        toggleActions: 'restart none reverse none'
+                    }
+                }
+            )
+            gsap.to(card.children[0],
+                {
+                    rotation: 360,
+                    duration: 30,
+                    repeat: -1,
+                    ease: "linear",
+                    transformOrigin: "50% 50%",
+                }
+            )
+            gsap.fromTo(card.children[1],
+                {
+                    opacity: 0,
+                    x: 100
+                },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: 'power1.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        ease: 'power1.out',
+                        start: 'top bottom-=100',
+                        end: 'top bottom-=100',
+                        toggleActions: 'restart none reverse none'
+                    }
+                }
+            )
+        })
     },[])
   return (
     <section id="experience" className="w-full md:pt-20 mt-20 section-padding xl:px-0">
         <div className="w-full h-full md:px-20 px-5">
             <SectionTitle title="Professional Work Experience" subtitle="💼 My Career Overview" />
             <div className="md:mt-24 mt-16 flex flex-col items-center">
-                {expCards.map(card => (
-                    <div key={card.title} className="flex gap-8 items-center">
+                {expCards.map((card,index) => (
+                    <div key={card.title} className="flex gap-8 items-center exp-card-container">
                         <SkillOrbit className="flex-shrink-0 hidden md:block" skills={card.techStack} />
                         <div className="flex gap-10 relative z-10">
                             <div className="rounded-full relative">
@@ -63,9 +112,12 @@ const Experience = () => {
                                         <li key={responsibility} className="text-white-50 md:text-lg text-sm">• {responsibility}</li>
                                     ))}
                                 </ul>
+                                {
+                            index !== expCards.length - 1 && <div className="m-8" />
+                        }
                             </div>
                         </div>
-                    </div>
+                    </div>             
                 ))}
             </div>
         </div>
