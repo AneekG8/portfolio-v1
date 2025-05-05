@@ -3,6 +3,8 @@ import { Button } from "../components/Button"
 import ComputerModelExperience from "../components/models/ComputerModels/ComputerModelExperience"
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Contact = () => {
     const formRef = useRef(null);
@@ -120,13 +122,54 @@ const Contact = () => {
         }
     };
 
+    useGSAP(()=>{
+        gsap.fromTo('.computer-model',
+            {
+                opacity: 0,
+                x: 100,
+            },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                ease: 'power1.out',
+                scrollTrigger: {
+                    trigger: '.computer-model',
+                    ease: 'power1.out',
+                    start: 'top bottom-=100',
+                    end: 'top bottom-=100',
+                    toggleActions: 'restart none reverse none',
+                },
+            },
+        )
+        gsap.fromTo('.contact-form',
+            {
+                opacity: 0,
+                x: -100,
+            },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                ease: 'power1.out',
+                scrollTrigger: {
+                    trigger: '.contact-form',
+                    ease: 'power1.out',
+                    start: 'top bottom-=100',
+                    end: 'top bottom-=100',
+                    toggleActions: 'restart none reverse none',
+                },
+            },
+        )
+    },[])
+
   return (
     <section id="contact" className="mt-16 section-padding flex-center">
         <div className="w-full h-full md:px-10 px-5">
             <SectionTitle title="Contact Me" subtitle="💬 Get in touch"/>
             <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10">
                 <div className="lg:col-span-6">
-                    <div className="card-border rounded-xl md:p-10 p-5 flex-center">
+                    <div className="card-border rounded-xl md:p-10 p-5 flex-center contact-form">
                         <form noValidate ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col flex-center gap-7">
                             {formFields.map((field) => (
                                 <div key={field.name} className="w-full">
@@ -152,8 +195,8 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="lg:col-span-6 flex flex-col items-center justify-center">
-                    <div className="bg-black-500 hover:cursor-grab rounded-lg w-full xl:h-120 sm:h-90 h-70">
-                    <ComputerModelExperience/>
+                    <div className="bg-black-500 hover:cursor-grab rounded-lg w-full xl:h-120 sm:h-90 h-70 computer-model">
+                        <ComputerModelExperience/>
                     </div>
                 </div>
             </div>
