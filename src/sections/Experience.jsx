@@ -4,6 +4,7 @@ import { expCards } from "../constants"
 import gsap from "gsap"
 import { useRef } from "react"
 import SkillOrbit from "../components/SkillOrbit"
+import SkillGalaxy from "../components/SkillGalaxy"
 
 const Experience = () => {
     const timelineBarRefs = useRef([]);
@@ -97,7 +98,10 @@ const Experience = () => {
             <div className="md:mt-24 mt-16 flex flex-col items-center">
                 {expCards.map((card,index) => (
                     <div key={card.title} className="flex gap-8 items-center exp-card-container">
-                        <SkillOrbit className="flex-shrink-0 hidden md:block" skills={card.techStack} />
+                        <SkillGalaxy className="w-40 h-40 md:w-60 md:h-60 lg:w-75 lg:h-75 flex-shrink-0 hidden md:block">
+                            <SkillOrbit className="w-[50%] h-[50%]" skills={card.techStackPrimary} />
+                            <SkillOrbit className="w-full h-full" skills={card.techStackSecondary} />
+                        </SkillGalaxy>
                         <div className="flex gap-10 relative z-10">
                             <div className="rounded-full relative">
                                 <img src={card.logoPath} alt="logo" className="relative z-10 rounded-full md:size-12 size-6.5 max-w-none" />

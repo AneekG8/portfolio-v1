@@ -21,7 +21,7 @@ const SkillOrbit = ({className, skills}) => {
     const orbitRadius = Math.min(centerX, centerY);
     
     return (
-        <div className={`w-40 h-40 md:w-60 md:h-60 lg:w-75 lg:h-75 border-1 border-dashed border-white-50 rounded-full skill-circle ${className}`} ref={containerRef}>
+        <div className={`border-1 border-dashed border-white-50 rounded-full skill-orbit ${className}`} ref={containerRef}>
             {dimensions.width > 0 &&
                 skills.map((icon, i) => {
                 const angle = (2 * Math.PI * i) / skills.length;

@@ -110,18 +110,6 @@ const techStackImgs = [
 
 const techStackRebelFE = [
   {
-    name: "HTML",
-    image: "/portfolio-v1/images/html.svg",
-  },
-  {
-    name: "CSS",
-    image: "/portfolio-v1/images/css.svg",
-  },
-  {
-    name: "Javascript",
-    image: "/portfolio-v1/images/js.svg",
-  },
-  {
     name: "Typescript",
     image: "/portfolio-v1/images/ts.svg",
   },
@@ -134,6 +122,18 @@ const techStackRebelFE = [
     image: "/portfolio-v1/images/mui.svg",
   },
   {
+    name: "HTML",
+    image: "/portfolio-v1/images/html.svg",
+  },
+  {
+    name: "CSS",
+    image: "/portfolio-v1/images/css.svg",
+  },
+  {
+    name: "Javascript",
+    image: "/portfolio-v1/images/js.svg",
+  },
+  {
     name: "Git",
     image: "/portfolio-v1/images/git.svg",
   },
@@ -144,25 +144,21 @@ const techStackRebelBE = [
     name: "Node.js",
     image: "/portfolio-v1/images/node.svg",
   },
-  // {
-  //   name: "Express.js",
-  //   image: "/portfolio-v1/images/express.svg",
-  // },
   {
-    name: "Nest.js",
-    image: "/portfolio-v1/images/nestjs.svg",
+    name: "Typescript",
+    image: "/portfolio-v1/images/ts.svg",
   },
   {
     name: "MySQL",
     image: "/portfolio-v1/images/mysql.svg",
   },
   {
-    name: "MongoDB",
-    image: "/portfolio-v1/images/mongodb.png",
+    name: "Nest.js",
+    image: "/portfolio-v1/images/nestjs.svg",
   },
   {
-    name: "Typescript",
-    image: "/portfolio-v1/images/ts.svg",
+    name: "MongoDB",
+    image: "/portfolio-v1/images/mongodb.png",
   },
   {
     name: "Redis",
@@ -244,7 +240,8 @@ const expCards = [
       "Developed a Smart Order Router Management System with hardware integration like printer, scanner and real time updates. Enahced UX with responsive grid system and animations",
       "Built a Workforce Management System project from scratch setting up authentication, UI library, Deployment pipeline etc.",
     ],
-    techStack: techStackRebelFE,
+    techStackPrimary: techStackRebelFE.slice(0, 3),
+    techStackSecondary: techStackRebelFE.slice(3),
   },
   {
     review:
@@ -258,7 +255,8 @@ const expCards = [
       "Developed a CRUD API system with authentication for users to register on our system",
       "Optimized user registration journey integrating multiple microservices and API call",
     ],
-    techStack: techStackRebelBE,
+    techStackPrimary: techStackRebelBE.slice(0, 3),
+    techStackSecondary: techStackRebelBE.slice(3),
   },
   // {
   //   review:
