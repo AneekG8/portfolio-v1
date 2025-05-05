@@ -510,3 +510,41 @@ section {
     transform: translateX(calc(-50% - var(--spacing) * 6));
   }
 }
+
+.skills-orbit-bg {
+  background: url("/portfolio-v1/images/space.jpg") no-repeat center center;
+  background-size: cover;
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    transparent 100%
+  );
+  @apply rounded-full absolute w-[130%] h-[130%] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 -z-1;
+  animation: orbitalMotion 30s linear infinite reverse;
+}
+
+.skill-circle {
+  position: relative;
+  animation: orbitalMotion 30s linear infinite;
+}
+
+.orbit-icon {
+  position: absolute;
+  border-radius: 50%;
+  animation: orbitalMotion 15s linear infinite;
+}
+
+.orbit-icon:hover {
+  transform: scale(1.2);
+}
+
+@keyframes orbitalMotion {
+  to {
+    transform: rotate(360deg);
+  }
+}
