@@ -69,7 +69,7 @@ const Experience = () => {
                     transformOrigin: "50% 50%",
                 }
             )
-            gsap.fromTo(card.children[1],
+            gsap.fromTo(card.children[1].children[1],
                 {
                     opacity: 0,
                     x: 100
