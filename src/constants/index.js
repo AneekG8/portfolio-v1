@@ -356,6 +356,20 @@ const socialImgs = [
   },
 ];
 
+const projects = [
+  {
+    title: "BechDo",
+    description:
+      "An app built with React and Node.js to help users buy and sell used products online",
+    imgPath: "/portfolio-v1/images/bechdo.png",
+  },
+  {
+    title: "Chat App",
+    description: "A chat app built with Node.js, EJS and Socket.io",
+    imgPath: "/portfolio-v1/images/chat-app.png",
+  },
+];
+
 export {
   words,
   abilities,
@@ -371,4 +385,5 @@ export {
   navLinks,
   techStackRebelFE,
   techStackRebelBE,
+  projects,
 };
