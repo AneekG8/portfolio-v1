@@ -527,7 +527,7 @@ section {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   @apply rounded-full absolute w-[130%] h-[130%] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 -z-1;
-  animation: orbitalMotion 30s linear infinite reverse;
+  animation: orbitalMotion 27s linear infinite reverse;
 }
 
 .skill-orbit {
