@@ -35,7 +35,7 @@ const ShowCase = () => {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 1,
+                    duration: 0.75,
                     scrollTrigger: {
                         trigger: container, 
                         start: 'top bottom-=100',
@@ -51,7 +51,7 @@ const ShowCase = () => {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 1,
+                    duration: 0.75,
                     scrollTrigger: {
                         trigger: container, 
                         start: 'top bottom-=100',
@@ -68,7 +68,7 @@ const ShowCase = () => {
                     opacity: 1,
                     scaleX: 1,
                     duration: 0.5,
-                    delay: 1,
+                    delay: 0.75,
                     transformOrigin: index % 2 ? 'left': 'right',
                     scrollTrigger: {
                         trigger: container, 
@@ -84,7 +84,7 @@ const ShowCase = () => {
                 {
                     opacity: 1,
                     duration: 0.5,
-                    delay: 1,
+                    delay: 0.75,
                     scrollTrigger: {
                         trigger: container, 
                         start: 'top bottom-=100',
