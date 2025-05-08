@@ -103,7 +103,7 @@ const ShowCase = () => {
                 {projects.map((project,index) => (
                     <div className={`flex md:flex-row${index % 2 ? '-reverse' : ''} flex-col md:gap-0 gap-5 relative project-container`}>
                         <div className={`grow-1 basis-0 z-40 md:my-15 ${index % 2 ? 'flex justify-end' : ''}`}>
-                            <img className="lg:w-[90%]" src={project.imgPath} alt={project.title} />
+                            <img className="lg:w-[90%] hover:scale-110 cursor-pointer transition-all duration-300" src={project.imgPath} alt={project.title} />
                         </div>
                         <div className={`hidden md:block w-[25%] h-0.5 absolute top-[50%] left-[50%] ${index % 2 === 0 ? '-translate-x-[100%]' : ''} -translate-y-1/2 bg-white-50 z-30`}/>
                         <div className="hidden md:block w-3 h-3 rounded-full bg-white-50 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-1/2"/>
