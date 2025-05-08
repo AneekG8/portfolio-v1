@@ -362,6 +362,8 @@ const projects = [
     description:
       "An app built with React and Node.js to help users buy and sell used products online",
     imgPath: "/portfolio-v1/images/bechdo.png",
+    githubUrl: "https://github.com/aneekg8/BechDo",
+    // linkUrl: "https://github.com/aneekg8/BechDo",
     skills: [
       {
         name: "React.js",
@@ -401,6 +403,8 @@ const projects = [
     title: "Chat App",
     description: "A chat app built with Node.js, EJS and Socket.io",
     imgPath: "/portfolio-v1/images/chat-app.png",
+    githubUrl: "https://github.com/aneekg8/Chat-App",
+    // linkUrl: "https://github.com/aneekg8/Chat-App",
     skills: [
       {
         name: "HTML",

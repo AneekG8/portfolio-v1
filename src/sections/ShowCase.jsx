@@ -103,7 +103,14 @@ const ShowCase = () => {
                 {projects.map((project,index) => (
                     <div className={`flex md:flex-row${index % 2 ? '-reverse' : ''} flex-col md:gap-0 gap-5 relative project-container`}>
                         <div className={`grow-1 basis-0 z-40 md:my-15 ${index % 2 ? 'flex justify-end' : ''}`}>
-                            <img className="lg:w-[90%] hover:scale-110 cursor-pointer transition-all duration-300" src={project.imgPath} alt={project.title} />
+                            <div className="lg:w-[90%] relative group hover:scale-110 cursor-pointer transition-all duration-300">
+                                <img className="size-full" src={project.imgPath} alt={project.title} />
+                                <div className="w-full h-full justify-center items-center flex gap-5 absolute inset-0 scale-y-0 group-hover:scale-y-100 transition-all duration-300">
+                                    <div className="scale-y-0 group-hover:scale-y-100 transition-all duration-500 bg-black opacity-40 w-[80%] h-[83%] absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2"/>
+                                    <a href={project.githubUrl} target='_blank' className='z-100 size-10 border border-black-50 bg-white flex justify-center items-center rounded-xl transition-all duration-250 hover:bg-white-50'><img src="/portfolio-v1/images/github.svg" alt="GitHub" /></a>
+                                    <a href={project.linkUrl} target='_blank' className='bg-[#b5b5b5] cursor-not-allowed pointer-events-none z-100 size-10 border border-black-50 flex justify-center items-center rounded-xl transition-all duration-250 hover:bg-white-50'><img src="/portfolio-v1/images/link.png" alt="Link" /></a>
+                                </div>
+                            </div>
                         </div>
                         <div className={`hidden md:block w-[25%] h-0.5 absolute top-[50%] left-[50%] ${index % 2 === 0 ? '-translate-x-[100%]' : ''} -translate-y-1/2 bg-white-50 z-30`}/>
                         <div className="hidden md:block w-3 h-3 rounded-full bg-white-50 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-1/2"/>
