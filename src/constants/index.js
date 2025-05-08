@@ -362,11 +362,75 @@ const projects = [
     description:
       "An app built with React and Node.js to help users buy and sell used products online",
     imgPath: "/portfolio-v1/images/bechdo.png",
+    skills: [
+      {
+        name: "React.js",
+        image: "/portfolio-v1/images/react.svg",
+      },
+      {
+        name: "HTML",
+        image: "/portfolio-v1/images/html.svg",
+      },
+      {
+        name: "CSS",
+        image: "/portfolio-v1/images/css.svg",
+      },
+      {
+        name: "Bootstrap",
+        image: "/portfolio-v1/images/bootstrap.svg",
+      },
+      {
+        name: "Javascript",
+        image: "/portfolio-v1/images/js.svg",
+      },
+      {
+        name: "Node.js",
+        image: "/portfolio-v1/images/node.svg",
+      },
+      // {
+      //   name: "Express.js",
+      //   image: "/portfolio-v1/images/express.svg",
+      // },
+      {
+        name: "MongoDB",
+        image: "/portfolio-v1/images/mongodb.png",
+      },
+    ],
   },
   {
     title: "Chat App",
     description: "A chat app built with Node.js, EJS and Socket.io",
     imgPath: "/portfolio-v1/images/chat-app.png",
+    skills: [
+      {
+        name: "HTML",
+        image: "/portfolio-v1/images/html.svg",
+      },
+      {
+        name: "CSS",
+        image: "/portfolio-v1/images/css.svg",
+      },
+      {
+        name: "Bootstrap",
+        image: "/portfolio-v1/images/bootstrap.svg",
+      },
+      {
+        name: "Javascript",
+        image: "/portfolio-v1/images/js.svg",
+      },
+      {
+        name: "Node.js",
+        image: "/portfolio-v1/images/node.svg",
+      },
+      // {
+      //   name: "Express.js",
+      //   image: "/portfolio-v1/images/express.svg",
+      // },
+      {
+        name: "Socket.io",
+        image: "/portfolio-v1/images/socket-io.svg",
+      },
+    ],
   },
 ];
 

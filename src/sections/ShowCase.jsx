@@ -108,10 +108,17 @@ const ShowCase = () => {
                         <div className={`hidden md:block w-[25%] h-0.5 absolute top-[50%] left-[50%] ${index % 2 === 0 ? '-translate-x-[100%]' : ''} -translate-y-1/2 bg-white-50 z-30`}/>
                         <div className="hidden md:block w-3 h-3 rounded-full bg-white-50 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-1/2"/>
                         <div className="hidden md:block w-0.25 bg-white mx-8"></div>
-                        <div className="grow-1 basis-0">
+                        <div className="grow-1 basis-0 md:overflow-hidden">
                             <div className="h-full flex flex-col gap-5 justify-center">
                                 <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold md:text-left text-center'>{project.title}</h2>
                                 <p className='text-white-50 lg:text-xl text-center md:text-left'>{project.description}</p>
+                                <div className="lg:w-2/3 md:w-full sm:w-1/2 w-3/4 overflow-x-auto md:mx-0 mx-auto project-skills-scroller-container">
+                                    <div className="w-max flex gap-5 md:justify-start justify-center project-skills-scroller-inner">
+                                        {[...project.skills,...project.skills].map((skill,index) => (
+                                            <img key={index} src={skill.image} alt={skill.name} className="md:size-10 size-8" />
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
