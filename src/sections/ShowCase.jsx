@@ -1,31 +1,14 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import React, {createRef, useRef } from 'react'
+import React from 'react'
 import SectionTitle from '../components/SectionTitle';
 import { projects } from '../constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ShowCase = () => {
-    const projectRefs = useRef(Array.from({length: 3},()=>createRef()));
     useGSAP(()=>{
-        projectRefs.current.map((ref,index) =>{
-            gsap.fromTo(ref.current,
-                {opacity: 0},
-                {
-                    opacity: 1,
-                    duration: 1.5,
-                    delay: 0.2 * index,
-                    scrollTrigger: {
-                        trigger: ref.current, 
-                        start: 'top bottom-=100',
-                        toggleActions: 'restart none none reverse'
-                    },
-                }
-            )
-        })
-
         gsap.utils.toArray('.project-container').forEach((container,index) => {
             gsap.fromTo(container.children[0],
                 {
@@ -93,7 +76,6 @@ const ShowCase = () => {
                 }
             )
         })
-
     },[])
   return (
     <section id="work" className='app-showcase'>

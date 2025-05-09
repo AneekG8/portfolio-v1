@@ -387,6 +387,19 @@ const projects = [
   },
 ];
 
+const educationDetails = [
+  {
+    title: "IITEST, Shibpur",
+    description: "B.Tech in IT, 2022 | 8.9 CGPA",
+    imgPath: "/portfolio-v1/images/iiest.webp",
+  },
+  {
+    title: "Raiganj Coronation High School",
+    description: "WBCHSE Science (PCM), 2017 | 86%",
+    imgPath: "/portfolio-v1/images/rchs.jpg",
+  },
+];
+
 export {
   words,
   abilities,
@@ -403,4 +416,5 @@ export {
   techStackRebelFE,
   techStackRebelBE,
   projects,
+  educationDetails,
 };
