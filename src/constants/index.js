@@ -1,11 +1,11 @@
 const navLinks = [
   {
-    name: "Work",
-    link: "#work",
-  },
-  {
     name: "Experience",
     link: "#experience",
+  },
+  {
+    name: "Work",
+    link: "#work",
   },
   {
     name: "Skills",
@@ -140,7 +140,7 @@ const SkillsEnum = {
   },
   SocketIO: {
     name: "Socket.IO",
-    icon: "/portfolio-v1/images/socketio.svg",
+    icon: "/portfolio-v1/images/socket-io.svg",
   },
 };
 

@@ -1,7 +1,7 @@
 // import { useGSAP } from "@gsap/react"
 import TechIconModel from "../components/models/TechModels/TechIconModel"
 import SectionTitle from "../components/SectionTitle"
-import { techStackIcons, techStackIconsDuplicate } from "../constants"
+import { SkillsEnum } from "../constants"
 // import gsap from "gsap"
 // import { useMediaQuery } from "react-responsive"
 
@@ -63,15 +63,15 @@ const Skills = () => {
                         </div>
                     ))}
                 </div> */}
-                <div className="mt-16 overflow-auto scroller">
-                    <div className="flex gap-12 scroller-inner">
-                        {[...techStackIcons, ...techStackIconsDuplicate].map((icon,index) =>(
-                            <div key={index} className="relative flex flex-col gap-2 rounded-full w-48 h-80 group overflow-hidden shrink-0 tech-icon-card">
-                                <div className="tech-icon-wrapper cursor-grab z-10">
-                                    <TechIconModel model={icon}/>
+                <div className="mt-16 overflow-auto scroller px-2">
+                    <div className="flex md:gap-12 scroller-inner">
+                        {[...Object.values(SkillsEnum), ...Object.values(SkillsEnum)].map((skill,index) =>(
+                            <div key={index} className="relative flex flex-col gap-2 rounded-full h-80 group overflow-hidden shrink-0 tech-icon-card">
+                                <div className="tech-icon-wrapper z-10">
+                                    <img src={skill.icon} alt={skill.name} className="size-15 lg:size-30" />
                                 </div>
                                 <div className="padding-x w-full text-center z-10">
-                                    <p>{icon.name}</p>
+                                    <p>{skill.name}</p>
                                 </div>
                                 <div className="absolute left-0 w-full h-full group-hover:bg-[#2D3240] transition-all duration-700 origin-bottom -bottom-[100%] group-hover:bottom-0"></div>
                             </div>
