@@ -64,16 +64,16 @@ const Skills = () => {
                     ))}
                 </div> */}
                 <div className="mt-16 overflow-auto scroller px-2">
-                    <div className="flex md:gap-12 scroller-inner">
+                    <div className="flex md:gap-12 sm:gap-6 gap-3 scroller-inner">
                         {[...Object.values(SkillsEnum), ...Object.values(SkillsEnum)].map((skill,index) =>(
-                            <div key={index} className="relative flex flex-col gap-2 rounded-full h-80 group overflow-hidden shrink-0 tech-icon-card">
-                                <div className="tech-icon-wrapper z-10">
-                                    <img src={skill.icon} alt={skill.name} className="size-15 lg:size-30" />
+                            <div key={index} className="p-2 relative flex flex-col gap-2 rounded-full group overflow-hidden shrink-0 tech-icon-card">
+                                <div className="flex justify-center items-center z-10">
+                                    <img src={skill.icon} alt={skill.name} className="size-10 sm:size-15 lg:size-30" />
                                 </div>
-                                <div className="padding-x w-full text-center z-10">
+                                <div className="px-2 w-full text-center z-10 text-xs sm:text-base">
                                     <p>{skill.name}</p>
                                 </div>
-                                <div className="absolute left-0 w-full h-full group-hover:bg-[#2D3240] transition-all duration-700 origin-bottom -bottom-[100%] group-hover:bottom-0"></div>
+                                <div className="absolute left-0 w-full h-full border-1 border-[#2D3240] transition-all duration-700 origin-bottom bottom-0"></div>
                             </div>
                         ))}
                     </div>
