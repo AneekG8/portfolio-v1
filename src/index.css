@@ -505,16 +505,34 @@ section {
 
 .scroller-inner {
   width: max-content;
-  animation: scroll 30s linear infinite;
+  animation: scroll-base 30s linear infinite;
+  @media (min-width: 40rem) {
+    animation: scroll-sm 30s linear infinite;
+  }
+  @media (min-width: 48rem) {
+    animation: scroll-md 3s linear infinite;
+  }
 }
 
 .scroller-inner:hover {
   animation-play-state: paused;
 }
 
-@keyframes scroll {
+@keyframes scroll-md {
   to {
     transform: translateX(calc(-50% - var(--spacing) * 6));
+  }
+}
+
+@keyframes scroll-sm {
+  to {
+    transform: translateX(calc(-50% - var(--spacing) * 3));
+  }
+}
+
+@keyframes scroll-base {
+  to {
+    transform: translateX(calc(-50% - var(--spacing) * 1.5));
   }
 }
 
