@@ -101,7 +101,7 @@ const ShowCase = () => {
             <SectionTitle title="Personal Projects" subtitle="👷 My Work" />
             <div className="mt-16 md:block flex flex-col gap-15">
                 {projects.map((project,index) => (
-                    <div className={`flex md:flex-row${index % 2 ? '-reverse' : ''} flex-col md:gap-0 gap-5 relative project-container`}>
+                    <div className={`flex ${index % 2 ? 'md:flex-row-reverse' : 'md:flex-row'} flex-col md:gap-0 gap-5 relative project-container`}>
                         <div className={`grow-1 basis-0 z-40 md:my-15 ${index % 2 ? 'flex justify-end' : ''}`}>
                             <div className="lg:w-[90%] relative group hover:scale-110 cursor-pointer transition-all duration-300">
                                 <img className="size-full" src={project.imgPath} alt={project.title} />
