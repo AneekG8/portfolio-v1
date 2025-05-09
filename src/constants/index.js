@@ -85,89 +85,83 @@ const abilities = [
   },
 ];
 
-const techStackImgs = [
-  {
-    name: "React Developer",
-    imgPath: "/portfolio-v1/images/logos/react.png",
+const SkillsEnum = {
+  HTML: {
+    name: "HTML",
+    icon: "/portfolio-v1/images/html.svg",
   },
-  {
-    name: "Python Developer",
-    imgPath: "/portfolio-v1/images/logos/python.svg",
+  CSS: {
+    name: "CSS",
+    icon: "/portfolio-v1/images/css.svg",
   },
-  {
-    name: "Backend Developer",
-    imgPath: "/portfolio-v1/images/logos/node.png",
+  Bootstrap: {
+    name: "Bootstrap",
+    icon: "/portfolio-v1/images/bootstrap.svg",
   },
-  {
-    name: "Interactive Developer",
-    imgPath: "/portfolio-v1/images/logos/three.png",
+  Javascript: {
+    name: "Javascript",
+    icon: "/portfolio-v1/images/js.svg",
   },
-  {
-    name: "Project Manager",
-    imgPath: "/portfolio-v1/images/logos/git.svg",
+  Typescript: {
+    name: "Typescript",
+    icon: "/portfolio-v1/images/ts.svg",
   },
-];
+  React: {
+    name: "React.js",
+    icon: "/portfolio-v1/images/react.svg",
+  },
+  MUI: {
+    name: "MUI",
+    icon: "/portfolio-v1/images/mui.svg",
+  },
+  Node: {
+    name: "Node.js",
+    icon: "/portfolio-v1/images/node.svg",
+  },
+  Nest: {
+    name: "Nest.js",
+    icon: "/portfolio-v1/images/nestjs.svg",
+  },
+  MySQL: {
+    name: "MySQL",
+    icon: "/portfolio-v1/images/mysql.svg",
+  },
+  MongoDB: {
+    name: "MongoDB",
+    icon: "/portfolio-v1/images/mongodb.png",
+  },
+  Redis: {
+    name: "Redis",
+    icon: "/portfolio-v1/images/redis.svg",
+  },
+  Git: {
+    name: "Git",
+    icon: "/portfolio-v1/images/git.svg",
+  },
+  SocketIO: {
+    name: "Socket.IO",
+    icon: "/portfolio-v1/images/socketio.svg",
+  },
+};
 
 const techStackRebelFE = [
-  {
-    name: "Typescript",
-    image: "/portfolio-v1/images/ts.svg",
-  },
-  {
-    name: "React.js",
-    image: "/portfolio-v1/images/react.svg",
-  },
-  {
-    name: "MUI",
-    image: "/portfolio-v1/images/mui.svg",
-  },
-  {
-    name: "HTML",
-    image: "/portfolio-v1/images/html.svg",
-  },
-  {
-    name: "CSS",
-    image: "/portfolio-v1/images/css.svg",
-  },
-  {
-    name: "Javascript",
-    image: "/portfolio-v1/images/js.svg",
-  },
-  {
-    name: "Git",
-    image: "/portfolio-v1/images/git.svg",
-  },
+  SkillsEnum.Typescript,
+  SkillsEnum.React,
+  SkillsEnum.MUI,
+  SkillsEnum.HTML,
+  SkillsEnum.CSS,
+  SkillsEnum.Javascript,
+  SkillsEnum.Git,
 ];
 
 const techStackRebelBE = [
-  {
-    name: "Node.js",
-    image: "/portfolio-v1/images/node.svg",
-  },
-  {
-    name: "Typescript",
-    image: "/portfolio-v1/images/ts.svg",
-  },
-  {
-    name: "MySQL",
-    image: "/portfolio-v1/images/mysql.svg",
-  },
-  {
-    name: "Nest.js",
-    image: "/portfolio-v1/images/nestjs.svg",
-  },
-  {
-    name: "MongoDB",
-    image: "/portfolio-v1/images/mongodb.png",
-  },
-  {
-    name: "Redis",
-    image: "/portfolio-v1/images/redis.svg",
-  },
-  {
-    name: "Git",
-    image: "/portfolio-v1/images/git.svg",
-  },
+  SkillsEnum.Node,
+  SkillsEnum.Typescript,
+  SkillsEnum.MySQL,
+  SkillsEnum.Nest,
+  SkillsEnum.MongoDB,
+  SkillsEnum.Redis,
+  SkillsEnum.Git,
 ];
 
 const techStackIcons = [
@@ -365,38 +359,14 @@ const projects = [
     githubUrl: "https://github.com/aneekg8/BechDo",
     // linkUrl: "https://github.com/aneekg8/BechDo",
     skills: [
-      {
-        name: "React.js",
-        image: "/portfolio-v1/images/react.svg",
-      },
-      {
-        name: "HTML",
-        image: "/portfolio-v1/images/html.svg",
-      },
-      {
-        name: "CSS",
-        image: "/portfolio-v1/images/css.svg",
-      },
-      {
-        name: "Bootstrap",
-        image: "/portfolio-v1/images/bootstrap.svg",
-      },
-      {
-        name: "Javascript",
-        image: "/portfolio-v1/images/js.svg",
-      },
-      {
-        name: "Node.js",
-        image: "/portfolio-v1/images/node.svg",
-      },
-      // {
-      //   name: "Express.js",
-      //   image: "/portfolio-v1/images/express.svg",
-      // },
-      {
-        name: "MongoDB",
-        image: "/portfolio-v1/images/mongodb.png",
-      },
+      SkillsEnum.React,
+      SkillsEnum.HTML,
+      SkillsEnum.CSS,
+      SkillsEnum.Bootstrap,
+      SkillsEnum.Javascript,
+      SkillsEnum.Node,
+      SkillsEnum.MongoDB,
+      SkillsEnum.Git,
     ],
   },
   {
@@ -406,34 +376,13 @@ const projects = [
     githubUrl: "https://github.com/aneekg8/Chat-App",
     // linkUrl: "https://github.com/aneekg8/Chat-App",
     skills: [
-      {
-        name: "HTML",
-        image: "/portfolio-v1/images/html.svg",
-      },
-      {
-        name: "CSS",
-        image: "/portfolio-v1/images/css.svg",
-      },
-      {
-        name: "Bootstrap",
-        image: "/portfolio-v1/images/bootstrap.svg",
-      },
-      {
-        name: "Javascript",
-        image: "/portfolio-v1/images/js.svg",
-      },
-      {
-        name: "Node.js",
-        image: "/portfolio-v1/images/node.svg",
-      },
-      // {
-      //   name: "Express.js",
-      //   image: "/portfolio-v1/images/express.svg",
-      // },
-      {
-        name: "Socket.io",
-        image: "/portfolio-v1/images/socket-io.svg",
-      },
+      SkillsEnum.HTML,
+      SkillsEnum.CSS,
+      SkillsEnum.Bootstrap,
+      SkillsEnum.Javascript,
+      SkillsEnum.Node,
+      SkillsEnum.SocketIO,
+      SkillsEnum.Git,
     ],
   },
 ];
@@ -449,8 +398,8 @@ export {
   socialImgs,
   techStackIcons,
   techStackIconsDuplicate,
-  techStackImgs,
   navLinks,
+  SkillsEnum,
   techStackRebelFE,
   techStackRebelBE,
   projects,

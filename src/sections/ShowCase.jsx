@@ -122,7 +122,7 @@ const ShowCase = () => {
                                 <div className="lg:w-2/3 md:w-full sm:w-1/2 w-3/4 overflow-x-auto md:mx-0 mx-auto project-skills-scroller-container">
                                     <div className="w-max flex gap-5 md:justify-start justify-center project-skills-scroller-inner">
                                         {[...project.skills,...project.skills].map((skill,index) => (
-                                            <img key={index} src={skill.image} alt={skill.name} className="md:size-10 size-8" />
+                                            <img key={index} src={skill.icon} alt={skill.name} className="md:size-10 size-8" />
                                         ))}
                                     </div>
                                 </div>

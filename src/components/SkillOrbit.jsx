@@ -23,15 +23,15 @@ const SkillOrbit = ({className, skills}) => {
     return (
         <div className={`border-1 border-dashed border-white-50 rounded-full skill-orbit ${className}`} ref={containerRef}>
             {dimensions.width > 0 &&
-                skills.map((icon, i) => {
+                skills.map((skill, i) => {
                 const angle = (2 * Math.PI * i) / skills.length;
                 const x = centerX + orbitRadius * Math.cos(angle) - iconSize / 2;
                 const y = centerY + orbitRadius * Math.sin(angle) - iconSize / 2;
                 return (
                     <img
                         key={i}
-                        src={icon.image}
-                        alt={icon.name}
+                        src={skill.icon}
+                        alt={skill.name}
                         className="orbit-icon size-5 lg:size-10"
                         style={{ left: `${x}px`, top: `${y}px` }}
                     />
