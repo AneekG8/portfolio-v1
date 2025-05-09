@@ -504,7 +504,7 @@ section {
 }
 
 .scroller-inner {
-  width: fit-content;
+  width: max-content;
   animation: scroll 30s linear infinite;
 }
 
