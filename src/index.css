@@ -510,7 +510,7 @@ section {
     animation: scroll-sm 30s linear infinite;
   }
   @media (min-width: 48rem) {
-    animation: scroll-md 3s linear infinite;
+    animation: scroll-md 30s linear infinite;
   }
 }
 
