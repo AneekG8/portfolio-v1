@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React from 'react'
 import SectionTitle from '../components/SectionTitle';
 import { projects } from '../constants';
+import { Button } from '../components/Button';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,6 +113,18 @@ const ShowCase = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="mt-16 flex justify-center items-center">
+                <Button 
+                    component="a" 
+                    className="md:w-85 md:h-16 w-75 h-12 subtitle" 
+                    text="See more on Github" 
+                    href="https://github.com/aneekg8" 
+                    iconPath="/portfolio-v1/images/github.svg" 
+                    target="_blank"
+                    iconClassName="xl:translate-y-0"
+                    textClassName="md:-translate-x-5 -translate-x-8"
+                />
             </div>
         </div>
     </section>

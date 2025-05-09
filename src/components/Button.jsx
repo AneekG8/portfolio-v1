@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Button = ({text, className, component = 'button', href, iconPath, loading = false, ...props}) => {
+export const Button = ({text, className, iconClassName, textClassName, component = 'button', href, iconPath, loading = false, ...props}) => {
     return (
         React.createElement(component, {
             className: `${className} cta-wrapper`,
@@ -13,11 +13,11 @@ export const Button = ({text, className, component = 'button', href, iconPath, l
                         <div className="w-6 h-6 border-4 border-white/20 border-t-white/90 rounded-full animate-spin"/>
                     ) : (
                         <>
-                            <p className="text">
+                            <p className={`text ${textClassName}`}>
                                 {text}
                             </p>
                             <div className="arrow-wrapper">
-                                <img src={iconPath} alt="arrow" />
+                                <img className={iconClassName} src={iconPath} alt="arrow" />
                             </div>
                         </>
                     )}
