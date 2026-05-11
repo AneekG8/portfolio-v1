@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aneekg8.github.io/portfolio-v1/sitemap.xml
